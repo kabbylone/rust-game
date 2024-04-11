@@ -6,6 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-#tcod = "0.15"
-tcod = { git = "https://github.com/tomassedovic/tcod-rs.git", rev = "d4ad074"}
-rand = "0.3.9"
+tcod = { version = "0.15", features = ["serialization"], git= "https://github.com/tomassedovic/tcod-rs.git" }
+rand = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[env]
+RUST_BACKTRACE = "1"
